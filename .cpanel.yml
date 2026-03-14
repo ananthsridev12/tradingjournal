@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/de2shrnx/tj.easi7.in/
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - /usr/bin/rsync -a --delete --exclude='.git/' --exclude='.cpanel.yml' --exclude='.gitignore' ./ "$DEPLOYPATH"
